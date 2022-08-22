@@ -13,14 +13,18 @@ function toDo() {
     const toDoName = document.createTextNode(toDoInput.value);
     const removeButton = document.createElement("button");
     removeButton.innerText = "❌";
+
     const updateButton = document.createElement("button");
     updateButton.innerText = "🔧";
+    //요소 추가
     newToDo.appendChild(toDoName);
     newToDo.appendChild(removeButton);
     newToDo.appendChild(updateButton);
+
+    //마진 추가 및 toDoList내 최종적으로 추가
     removeButton.style.marginLeft = "15px";
     removeButton.style.marginRight = "5px";
-    toDoForm.appendChild(newToDo);
+    toDoList.appendChild(newToDo);
 
     //toDos 리스트 내 id와 같이 추가해서 저장
     if (!toDos.length) {
@@ -29,9 +33,17 @@ function toDo() {
       toDos.push([toDos.at(-1)[0] + 1, toDoName]);
     }
     toDoInput.value = "";
+    newToDo.setAttribute("id", toDos.at(-1)[0]);
+    //remove, update 기능 구현
+    removeButton.onclick = () => remove(newToDo);
+    updateButton.onclick = () => update(newToDo);
   });
 }
 
-function update() {}
-function remove() {}
+function update(toDo) {
+  console.log("update", toDo.id);
+}
+function remove(toDo) {
+  console.log("remove", toDo.id);
+}
 export default toDo;
