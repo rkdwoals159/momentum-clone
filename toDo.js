@@ -1,11 +1,22 @@
 function toDo() {
+  const toDoClass = document.querySelector(".toDo");
   const toDos = [];
+  const toDoMainButton = document.querySelector("#toDoMainButton");
   const toDoTitle = document.querySelector("#toDoTitle");
   const toDoInput = document.querySelector("#toDoInput");
   const toDoForm = document.querySelector("#toDoForm");
   const toDoList = document.querySelector("#toDoList");
   toDoTitle.style.display = "block";
   toDoInput.style.display = "block";
+
+  //toDo버튼 on/off 구현
+  toDoMainButton.onclick = () => {
+    if (toDoClass.style.display === "block") {
+      toDoClass.style.display = "none";
+    } else {
+      toDoClass.style.display = "block";
+    }
+  };
 
   toDoForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -45,8 +56,7 @@ function toDo() {
 }
 
 function dropDown(toDo) {
-  const toDoNameInDiv = toDo.querySelector("div");
-  const dropDownList = document.createElement("ul");
+  console.log(toDo.id);
 }
 
 export default toDo;

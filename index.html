@@ -4,18 +4,37 @@
     <title>hi</title>
   </head>
   <body>
+    <!-- 메인 시작 -->
     <h1 id="question">Hello, what's your name?</h1>
     <form id="form">
       <input id="name" type="text" />
     </form>
     <h1 id="clock" style="display: none"></h1>
     <h2 id="hi" style="display: none">hi</h2>
-    <h2 style="display: none" id="toDoTitle">What is your main Focus today?</h2>
-    <form id="toDoForm">
-      <input style="display: none" id="toDoInput" type="text" />
-    </form>
-    <ul id="toDoList"></ul>
+    <!-- 메인focus -->
+    <div class="mainFocusDiv" style="display: none">
+      <h2 style="display: none" id="toDoTitle">What is your main Focus today?</h2>
+      <form id="mainFocusForm">
+        <input id="mainFocusInput" type="text" />
+      </form>
+    </div>
 
+    <div class="mainFocusListDiv" style="display: none">
+      <div>TODAY</div>
+      <div id="mainFocusList"></div>
+    </div>
+
+    <!-- todo리스트 -->
+    <div class="toDo" style="display: none">
+      <ul id="toDoList"></ul>
+      <form id="toDoForm">
+        <input style="display: none" placeholder="new Todo" id="toDoInput" type="text" />
+      </form>
+    </div>
+
+    <button type="button" id="toDoMainButton" style="display: none">Todo</button>
+
+    <!-- 스크립트 -->
     <script type="module" src="./main.js"></script>
   </body>
 </html>
