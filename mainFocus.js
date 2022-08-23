@@ -8,7 +8,7 @@ function mainFocus() {
     e.preventDefault();
     mainFocusDiv.style.display = "none";
     mainFocusListDiv.style.display = "block";
-    mainFocusListDiv.querySelector("#mainFocusList").innerText = mainFocusInput.value;
+    mainFocusListDiv.querySelector("#mainFocusListName").innerText = mainFocusInput.value;
   });
 }
 export default mainFocus;
