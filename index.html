@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko-kr">
   <head>
+    <link rel="stylesheet" href="style.css" />
     <title>hi</title>
+    <style>
+      .wrap {
+        margin: 0 auto;
+        background-color: aquamarine;
+        height: 920px;
+        width: 100%;
+      }
+      .leftSide {
+        background-color: rebeccapurple;
+        height: 920px;
+        width: 10%;
+      }
+      .center {
+        background-color: blanchedalmond;
+        height: 920px;
+        width: 80%;
+      }
+      .rightSide {
+        background-color: blue;
+        height: 920px;
+        width: 10%;
+      }
+    </style>
   </head>
   <body>
-    <!-- 메인 시작 -->
-    <h1 id="question">Hello, what's your name?</h1>
-    <form id="form">
-      <input id="name" type="text" />
-    </form>
-    <h1 id="clock" style="display: none"></h1>
-    <h2 id="hi" style="display: none">hi</h2>
-    <!-- 메인focus -->
-    <div class="mainFocusDiv" style="display: none">
-      <h2 style="display: none" id="toDoTitle">What is your main Focus today?</h2>
-      <form id="mainFocusForm">
-        <input id="mainFocusInput" type="text" />
-      </form>
-    </div>
+    <div class="wrap">
+      <div class="leftSide" style="float: left"></div>
+      <div class="center" style="float: left">
+        <!-- 메인 시작 -->
+        <h1 id="question">Hello, what's your name?</h1>
+        <form id="form">
+          <input id="name" type="text" />
+        </form>
+        <h1 id="clock" style="display: none"></h1>
+        <h2 id="hi" style="display: none">hi</h2>
+        <!-- 메인focus -->
+        <div class="mainFocusDiv" style="display: none">
+          <h2 style="display: none" id="toDoTitle">What is your main Focus today?</h2>
+          <form id="mainFocusForm">
+            <input id="mainFocusInput" type="text" />
+          </form>
+        </div>
 
-    <div class="mainFocusListDiv" style="display: none">
-      <div>TODAY</div>
-      <div id="mainFocusList" style="display: flex">
-        <div>check</div>
-        <div id="mainFocusListName"></div>
-        <div>else</div>
+        <div class="mainFocusListDiv" style="display: none">
+          <div>TODAY</div>
+          <div id="mainFocusList" style="display: flex">
+            <div>check</div>
+            <div id="mainFocusListName"></div>
+            <div>else</div>
+          </div>
+        </div>
       </div>
+      <div class="rightSide" style="float: left">
+        <!-- todo리스트 -->
+        <div class="toDo" style="display: none">
+          <ul id="toDoList"></ul>
+          <form id="toDoForm">
+            <input style="display: none" placeholder="new Todo" id="toDoInput" type="text" />
+          </form>
+        </div>
+
+        <button type="button" id="toDoMainButton" style="display: none">Todo</button>
+      </div>
+
+      <!-- 스크립트 -->
+      <script type="module" src="./main.js"></script>
     </div>
-
-    <!-- todo리스트 -->
-    <div class="toDo" style="display: none">
-      <ul id="toDoList"></ul>
-      <form id="toDoForm">
-        <input style="display: none" placeholder="new Todo" id="toDoInput" type="text" />
-      </form>
-    </div>
-
-    <button type="button" id="toDoMainButton" style="display: none">Todo</button>
-
-    <!-- 스크립트 -->
-    <script type="module" src="./main.js"></script>
   </body>
 </html>
