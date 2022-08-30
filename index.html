@@ -18,12 +18,12 @@
       .center {
         background-color: blanchedalmond;
         height: 920px;
-        width: 80%;
+        width: 70%;
       }
       .rightSide {
         background-color: blue;
         height: 920px;
-        width: 10%;
+        width: 20%;
       }
     </style>
   </head>
@@ -58,7 +58,14 @@
       <div class="rightSide" style="float: left">
         <!-- todo리스트 -->
         <div class="toDo" style="display: none">
+          <div class="toDoDropDown">
+            <ul class="toDoDropDownUl">
+              <li>Edit</li>
+              <li>Delete</li>
+            </ul>
+          </div>
           <ul id="toDoList"></ul>
+
           <form id="toDoForm">
             <input style="display: none" placeholder="new Todo" id="toDoInput" type="text" />
           </form>

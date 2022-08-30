@@ -6,13 +6,33 @@
 }
 .rightSide {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
 .toDo {
   background-color: darkgray;
+  width: 80%;
+}
+
+#toDoList {
+  padding-left: 10px;
+  background-color: brown;
   display: flex;
+  flex-direction: column;
+}
+#toDoList li {
   justify-content: flex-end;
+  padding-right: 10px;
+}
+#toDoList div {
+  width: 300px;
+}
+#toDoList svg {
+  order: 3;
+}
+.toDoDropDown {
+  z-index: 1;
+  order: 2;
 }

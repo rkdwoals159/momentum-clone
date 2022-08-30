@@ -38,8 +38,9 @@ function toDo() {
 
     //마진 추가 및 toDoList내 최종적으로 추가
     newToDo.style.display = "flex";
-    dropDownButton.style.marginLeft = "15px";
-    dropDownButton.style.marginRight = "5px";
+    newToDo.style.justifyContent = "space-between";
+    // dropDownButton.style.marginLeft = "15px";
+    // dropDownButton.style.marginRight = "5px";
     toDoList.appendChild(newToDo);
 
     //toDos 리스트 내 id와 같이 추가해서 저장
@@ -55,8 +56,12 @@ function toDo() {
   });
 }
 
+///  todoList 옆 ... 버튼을 눌렀을 경우 edit와 delete기능 생성
 function dropDown(toDo) {
-  console.log(toDo.id);
+  const dropDownDiv = document.querySelector(".toDoDropDown");
+  dropDownDiv.style.display = "block";
+  console.log(toDo.querySelector("svg"));
+  toDo.appendChild(dropDownDiv);
 }
 
 export default toDo;
